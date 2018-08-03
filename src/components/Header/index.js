@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Shape from './HeaderGradient.svg'
+import Tilt from 'react-tilt'
 
 const HeaderWrapper = styled.section`
   width: 100%;
@@ -24,6 +25,22 @@ const CodeDiv = styled.div`
   transform: scale(1.3) translateX(50px) translateY(200px) perspective(3190px)
     rotateY(-29deg) rotateX(4deg) rotate(4deg);
   box-shadow: 5px 10px 21px 0px RGBA(118, 118, 185, 0.75);
+  padding: 15px;
+  padding-top: 30px;
+  color: white;
+  position: relative;
+`
+
+const CodeDivTop = styled.div`
+  width: 100%;
+  background: RGBA(118, 118, 185, 0.75);
+  height: 20px;
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  border-radius: 10px 10px 0 0;
 `
 
 const HeaderInner = styled.div`
@@ -42,7 +59,12 @@ class Header extends Component {
       <HeaderWrapper>
         <HeaderInner>
           <div>Text here</div>
-          <CodeDiv />
+          <Tilt options={{ max: 10 }}>
+            <CodeDiv>
+              <CodeDivTop />
+              Code text here test test test
+            </CodeDiv>
+          </Tilt>
         </HeaderInner>
         <HeaderGradient>
           <img src={Shape} />
