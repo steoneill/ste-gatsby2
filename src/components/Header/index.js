@@ -62,7 +62,7 @@ class Header extends Component {
           <Tilt options={{ max: 10 }}>
             <CodeDiv>
               <CodeDivTop />
-              You just lost the game
+              Sorry ste
             </CodeDiv>
           </Tilt>
         </HeaderInner>
