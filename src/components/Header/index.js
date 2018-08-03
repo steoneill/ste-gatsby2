@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import Shape from './HeaderGradient.svg'
-import Tilt from 'react-tilt'
 
 const HeaderWrapper = styled.section`
   width: 100%;
@@ -59,12 +58,10 @@ class Header extends Component {
       <HeaderWrapper>
         <HeaderInner>
           <div>Text here</div>
-          <Tilt options={{ max: 10 }}>
-            <CodeDiv>
-              <CodeDivTop />
-              Sorry ste
-            </CodeDiv>
-          </Tilt>
+          <CodeDiv>
+            <CodeDivTop />
+            Sorry ste
+          </CodeDiv>
         </HeaderInner>
         <HeaderGradient>
           <img src={Shape} />
